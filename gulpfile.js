@@ -11,3 +11,5 @@ function compilaSass() {
 exports.default = function () {  
     gulp.watch('./src/styles/*.scss',{ignoreInitial:false},gulp.parallel(compilaSass))
 }
+
+exports.build = gulp.parallel(compilaSass)
